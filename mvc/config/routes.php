@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-function __autoload($classname) {
+spl_autoload_register(
+function ($classname) {
 	if(strpos($classname, 'CI_') !== 0) {
 		$file = APPPATH . 'libraries/' . $classname . '.php';
 		if(file_exists($file) && is_file($file)) {
@@ -9,6 +10,7 @@ function __autoload($classname) {
 		}
 	}
 }
+);
 
 $route['version'] = "app/version";
 /*
@@ -67,5 +69,5 @@ if ($this->config->item('installed') == 'no') {
 	$route['default_controller'] = "signin";
 }
 $route['404_override'] = '';
-// $route['translate_uri_dashes'] = FALSE;
+$route['translate_uri_dashes'] = FALSE;
 
