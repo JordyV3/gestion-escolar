@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 // $config['base_url'] = (isset($_SERVER['HTTPS']) ? "https://" : "http://") . $_SERVER['HTTP_HOST'] . preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
 //$config['base_url'] = 'http://192.168.0.108/gestion-escolar/';
-$config['base_url'] = 'https://gestion-app-umg.herokuapp.com/';
+$config['base_url'] = 'https://gestion-app-umg.herokuapp.com/gestion-escolar/';
 
 
 // $config['base_path'] = $_SERVER['DOCUMENT_ROOT'] . preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
